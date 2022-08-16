@@ -55,6 +55,11 @@ h1, h2, h3, h4 {
     letter-spacing: 1px;
 }
 
+.header {
+    box-shadow: 5px 5px 20px #00000020;
+    z-index: 10;
+}
+
 .cardContainer {
     background-color: var(--light-bluegrey);
 }
