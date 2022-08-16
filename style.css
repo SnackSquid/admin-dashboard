@@ -7,26 +7,34 @@
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
-  'wght' 400,
+  'wght' 500,
   'GRAD' 0,
   'opsz' 48;
 }
 
 h1, h2, h3, h4 {
     font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;;
 }
 
 body {
     margin: 0;
 }
 
+p {
+    margin: 0;
+    padding: 0;
+}
+
 .container {
     display: grid;
     grid-template-columns: minmax(100px, 260px) 3fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
     height: 100vh;
 }
 
+/* Sidebar area */
 .sidebar {
     display: grid;
     background-color: var(--green);
@@ -65,11 +73,99 @@ body {
     letter-spacing: 1px;
 }
 
+/* Header area */
+
 .header {
-    box-shadow: 5px 5px 20px #00000020;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    box-shadow: 1px 1px 10px #00000030;
+    padding: 10px 40px 0px 40px;
     z-index: 10;
 }
 
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search > form {
+    display: flex;
+    flex: auto;
+    align-items: center;
+}
+
+.search > form > button {
+    background-color: white;
+    border: none;
+}
+
+.search > form > input {
+    display: flex;
+    flex: auto;
+    border: none;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: var(--light-bluegrey);
+}
+
+.search > span {
+    font-weight: 700;
+}
+
+.welcome {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatar {
+    display: flex;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    overflow: hidden;
+}
+
+.avatar > img {
+    width: 200px;
+    height: auto;
+}
+
+#smallAvatar {
+    height: 40px;
+    width: 40px;
+
+}
+
+.notificationArea {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 10px;
+}
+
+.actionButtons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    align-self: center;
+}
+
+.actionButtons > button {
+    height: 35px;
+    width: 100px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    background-color: var(--green);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Card area */
+
 .cardContainer {
     background-color: var(--light-bluegrey);
+    
 }
