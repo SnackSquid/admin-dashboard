@@ -14,12 +14,16 @@
 
 h1, h2, h3, h4 {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    letter-spacing: 2px;
+}
+
+body {
+    margin: 0;
 }
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: minmax(100px, 260px) 3fr;
+    grid-template-rows: 1fr 4fr;
     height: 100vh;
 }
 
@@ -35,11 +39,15 @@ h1, h2, h3, h4 {
 
 .sidebarHeader {
     display: flex;
+    align-items: center;
+    justify-content: left;
+    letter-spacing: 1px;
 }
 
 .sidebarHeader > img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
+    margin-left: -10px;
 }
 
 .nav, .settings {
@@ -49,9 +57,11 @@ h1, h2, h3, h4 {
 .navItem, .settingsItem {
     display: flex;
     justify-content: left;
+    align-items: center;
     gap: 15px;
     padding: 8px;
-    font-weight: 650;
+    font-weight: 600;
+    font-size: 18px;
     letter-spacing: 1px;
 }
 
